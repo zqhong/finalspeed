@@ -161,8 +161,8 @@ public class CapEnv {
 				long t=System.currentTimeMillis();
 				while(true){
 					if(System.currentTimeMillis()-t>5*1000){
-						MLog.info("休眠恢复");
-						MLog.println("重新初始化接口");
+						MLog.info("Resume sleep state");
+						MLog.println("Reinit interface...");
 						try {
 							initInterface();
 						} catch (Exception e1) {
@@ -388,14 +388,13 @@ public class CapEnv {
 			short len=(short) ByteShortConvert.toShort(b2, 0);
 			int ipLength=toUnsigned(len)-2;
 			byte[] ipData=new byte[ipLength];
-			//设置ppp参数
 			PacketUtils.pppHead_static[2]=pppData[2];
 			PacketUtils.pppHead_static[3]=pppData[3];
 			if(ipLength==(pppData.length-8)){
 				System.arraycopy(pppData, 8, ipData, 0, ipLength);
 				ipV4Packet=IpV4Packet.newPacket(ipData, 0, ipData.length);
 			}else {
-				MLog.println("长度不符!");
+				MLog.println("It is not a valid IP");
 			}
 		}
 		return ipV4Packet;

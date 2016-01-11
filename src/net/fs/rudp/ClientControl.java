@@ -113,7 +113,7 @@ public class ClientControl {
 					protocal="udp";
 				}
 				//MLog.println("    receive_ping222: "+pm.getPingId()+" "+new Date());
-				MLog.println("delay_"+protocal+" "+pingDelay+"ms "+dp.getAddress().getHostAddress()+":"+dp.getPort());
+				//MLog.println("delay_"+protocal+" "+pingDelay+"ms "+dp.getAddress().getHostAddress()+":"+dp.getPort());
 			}
 		}
 	}

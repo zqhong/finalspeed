@@ -128,7 +128,7 @@ public class TCPTun {
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-		MLog.println("发送第一次握手 "+" ident "+localIdent);
+		//MLog.println("发送第一次握手 "+" ident "+localIdent);
 		MLog.println(""+syncPacket);
 		
 	}
@@ -167,7 +167,7 @@ public class TCPTun {
 					remoteStartSequence=tcpHeader.getSequenceNumber();
 					remoteSequence=remoteStartSequence+1;
 					remoteSequence_max=remoteSequence;
-					MLog.println("接收第一次握手 "+remoteAddress.getHostAddress()+":"+remotePort+"->"+localAddress.getHostAddress()+":"+localPort+" ident "+ipV4Header.getIdentification());
+					//MLog.println("接收第一次握手 "+remoteAddress.getHostAddress()+":"+remotePort+"->"+localAddress.getHostAddress()+":"+localPort+" ident "+ipV4Header.getIdentification());
 					MLog.println(""+packet);
 					Packet responePacket=PacketUtils.createSyncAck(
 							capEnv.local_mac,
@@ -182,7 +182,7 @@ public class TCPTun {
 						e.printStackTrace();
 					}
 					localSequence=localStartSequence+1;
-					MLog.println("发送第二次握手 "+capEnv.local_mac+"->"+capEnv.gateway_mac+" "+localAddress+"->"+" ident "+0);
+					//MLog.println("发送第二次握手 "+capEnv.local_mac+"->"+capEnv.gateway_mac+" "+localAddress+"->"+" ident "+0);
 
 					MLog.println(""+responePacket);
 				}
@@ -191,7 +191,7 @@ public class TCPTun {
 					if(tcpPacket.getPayload()==null){
 						//第三次握手,客户端确认
 						if(tcpHeader.getAcknowledgmentNumber()==localSequence){
-							MLog.println("接收第三次握手 "+" ident "+ipV4Header.getIdentification());
+							//MLog.println("接收第三次握手 "+" ident "+ipV4Header.getIdentification());
 							MLog.println(packet+"");
 							Thread t1=new Thread(){
 								public void run(){

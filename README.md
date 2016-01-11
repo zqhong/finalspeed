@@ -9,12 +9,17 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 ### 命令行版本的客户端
 默认是图形化版本的客户端，不方便部署在服务器。如果需要命令行版本的，请在 [Releases](https://github.com/zqhong/finalspeed/releases) 中下载。
 
+
+要求
+* 管理员运行劝降
+* jre >= 1.6（如果下载上面提供的客户端的话）
+
 使用方法：`sudo java -jar client.jar`。如果在 Windows 下，则需要使用管理员运行。
 
 配置文件 - clien_config.json
 ```
 {
-    //下载速度，单位是 B，字节。这里换算起来就是 11MB。请把这里改成本机的下载速度
+    // 下载速度，单位是 B，字节。这里换算起来就是 11MB。请把这里改成本机的下载速度
     "download_speed": 11200698, 
     // 协议：tcp 或 udp。注意：服务端如果是 OpenVZ 架构的话，则只支持 udp。
     "protocal": "udp", 
@@ -30,7 +35,7 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 ```
 
 配置文件 - port_map.json
-```json
+```
 {
     "map_list": [
         {
@@ -63,4 +68,4 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 论坛 http://www.d1sm.net/forum-44-1.html
 
 #### 感谢
-该项目 fork 自 [dlsm/finalspeed](https://github.com/d1sm/finalspeed)，感觉作者的付出。
+该项目 fork 自 [dlsm/finalspeed](https://github.com/d1sm/finalspeed)，感觉作者的辛勤付出。
