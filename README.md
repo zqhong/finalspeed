@@ -3,6 +3,7 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 
 ### 安装教程
 [客户端安装说明](http://www.d1sm.net/thread-7-1-1.html)
+<br />
 [服务端安装说明](http://www.d1sm.net/thread-8-1-1.html)
 
 
@@ -11,7 +12,7 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 
 
 要求
-* 管理员运行劝降
+* 管理员运行权限
 * jre >= 1.6（如果下载上面提供的客户端的话）
 
 使用方法：`sudo java -jar client.jar`。如果在 Windows 下，则需要使用管理员运行。
@@ -68,4 +69,4 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 论坛 http://www.d1sm.net/forum-44-1.html
 
 #### 感谢
-该项目 fork 自 [dlsm/finalspeed](https://github.com/d1sm/finalspeed)，感觉作者的辛勤付出。
+该项目 fork 自 [dlsm/finalspeed](https://github.com/d1sm/finalspeed)，感谢作者的辛勤付出。
