@@ -12,7 +12,7 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 使用方法：`sudo java -jar client.jar`。如果在 Windows 下，则需要使用管理员运行。
 
 配置文件 - clien_config.json
-```json
+```
 {
     //下载速度，单位是 B，字节。这里换算起来就是 11MB。请把这里改成本机的下载速度
     "download_speed": 11200698, 
