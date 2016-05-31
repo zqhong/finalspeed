@@ -3,10 +3,10 @@
 package net.fs.rudp.message;
 
 
-import java.net.DatagramPacket;
-
 import net.fs.utils.ByteIntConvert;
 import net.fs.utils.ByteShortConvert;
+
+import java.net.DatagramPacket;
 
 public class CloseMessage_Conn extends Message{
 	
