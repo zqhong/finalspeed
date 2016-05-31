@@ -1,3 +1,5 @@
 /bin/
 /client_config.json
 /port_map.json
+*.iml
+.idea/
